@@ -38,6 +38,7 @@
     {"id":{"name":"runNinja_obj","path":"objects/runNinja_obj/runNinja_obj.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"ninja_idle_","path":"sprites/ninja_idle_/ninja_idle_.yy",},},
+    {"id":{"name":"ninjaAttack","path":"sprites/ninjaAttack/ninjaAttack.yy",},},
     {"id":{"name":"runningNinja","path":"sprites/runningNinja/runningNinja.yy",},},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},},
   ],
