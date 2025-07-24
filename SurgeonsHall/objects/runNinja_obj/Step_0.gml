@@ -6,7 +6,7 @@ var hmove = 0;
 if (!attack_active && keyboard_check_pressed(vk_space)) {
     sprite_index = ninjaAttack;
     image_index = 0;
-    image_speed = 1 // 10 fps at 60 room speed
+    image_speed = 4 // 10 fps at 60 room speed
     attack_active = true;
 }
 
