@@ -1,31 +1,23 @@
-// Movement speed
+// === Movement ===
 var move_speed = 4;
-
-// Reset motion
 var hmove = 0;
-var vmove = 0;
 
-// WASD input
-if (keyboard_check(ord("A"))) {
-    hmove = -1;
-}
-if (keyboard_check(ord("D"))) {
-    hmove = 1;
-}
-if (keyboard_check(ord("W"))) {
-    vmove = -1;
-}
-if (keyboard_check(ord("S"))) {
-    vmove = 1;
-}
+// A/D or Left/Right keys for movement
+if (keyboard_check(ord("A"))) hmove = -1;
+if (keyboard_check(ord("D"))) hmove = 1;
 
-// Normalize diagonal movement
-if (hmove != 0 && vmove != 0) {
-    var normal = point_distance(0, 0, hmove, vmove);
-    hmove /= normal;
-    vmove /= normal;
-}
-
-// Apply movement
+// === Apply Movement ===
 x += hmove * move_speed;
-y += vmove * move_speed;
+
+// === Sprite + Flip Logic ===
+if (hmove != 0) {
+    // Running
+    sprite_index = runningNinja;
+    image_xscale = (hmove > 0) ? 1 : -1;
+    image_speed = 1;
+} else {
+    // Idle
+    sprite_index = ninja_idle_;
+    image_speed = 1; // Or 0 if completely static
+    // Keep current facing direction
+}
